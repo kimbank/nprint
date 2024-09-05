@@ -17,7 +17,7 @@ void WlanHeader::set_raw(void *raw) {
 
 void WlanHeader::print_header(FILE *out) {
     if(raw == NULL) {
-        printf("WlanHeader: raw data not set\n");
+        fprintf("WlanHeader: raw data not set\n");
     } else {
         fprintf(out, "Wlan Header: rx-addr: %02x:%02x:%02x:%02x:%02x:%02x, ",
                raw->rx_addr[0],
